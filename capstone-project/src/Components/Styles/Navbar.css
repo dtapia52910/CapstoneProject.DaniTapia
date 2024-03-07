@@ -1,0 +1,16 @@
+.navbar-list {
+    list-style-type: none; /* Remove bullets */
+    display: flex; /* Display items in a row */
+    justify-content: center; /* Center items horizontally */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .navbar-item {
+    margin: 0 10px; /* Add spacing between items */
+  }
+  
+  .navbar-item a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Change link color */
+  }
+  
