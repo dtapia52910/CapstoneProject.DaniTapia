@@ -31,7 +31,6 @@ export const api = createApi({
       }),
     }),
 
-    // Additional Cart Endpoints
     addToCart: builder.mutation({
       query: (productData) => ({
         url: "/carts",

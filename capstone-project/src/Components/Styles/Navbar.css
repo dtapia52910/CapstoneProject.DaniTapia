@@ -1,16 +1,54 @@
+/* Navbar.css */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  color: #2C1B14;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center items vertically */
+  border-radius: 10px;
+  z-index: 1000; /* Ensure the navbar stays on top */
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 800px; /* Adjust max-width as needed */
+}
+
 .navbar-list {
-    list-style-type: none; /* Remove bullets */
-    display: flex; /* Display items in a row */
-    justify-content: center; /* Center items horizontally */
-    padding: 0; /* Remove default padding */
-  }
-  
-  .navbar-item {
-    margin: 0 10px; /* Add spacing between items */
-  }
-  
-  .navbar-item a {
-    text-decoration: none; /* Remove underline from links */
-    color: black; /* Change link color */
-  }
-  
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Center items vertically */
+  width: 100%;
+  max-width: 600px; /* Adjust max-width as needed */
+}
+
+.navbar-item {
+  margin-left: 10px;
+  color: #2C1B14;
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #2C1B14;
+  color: #2C1B14;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2C1B14;
+  color: white;
+}
+
+body {
+  margin-top: 50px; /* Adjust based on the navbar height */
+}
