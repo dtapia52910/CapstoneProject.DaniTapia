@@ -4,6 +4,7 @@ import LoginForm from './Components/Login';
 import ProductList from './Components/ProductList';
 import Cart from './Components/Cart';
 import Navbar from './Components/NavBar';
+import SuccessfulCheckout from './Components/SuccessfulCheckout';
 import './App.css';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
                         <Route path="/login" element={<LoginForm onLogin={handleLogin} />} />
                         {/* Pass cart, removeFromCart, and updateCartItemQuantity as props to Cart */}
                         {isLoggedIn && <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} updateCartItemQuantity={updateCartItemQuantity} />} />}
+                        <Route path="/successful-checkout" element={<SuccessfulCheckout />} />
                     </Routes>
                 </div>
             </BrowserRouter>
