@@ -1,6 +1,7 @@
 /* Navbar.css */
+
 .navbar {
-  position: sticky;
+  position: fixed; /* Change to fixed so that it stays at the top */
   top: 0;
   left: 0;
   width: 100%;
@@ -9,7 +10,7 @@
   padding: 10px 0;
   display: flex;
   justify-content: center;
-  align-items: center; /* Center items vertically */
+  align-items: center;
   border-radius: 10px;
   z-index: 1000; /* Ensure the navbar stays on top */
 }

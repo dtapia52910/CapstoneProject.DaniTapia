@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../Components/Styles/ProductCard.css';
+import './ProductDetails'
+import { Link } from 'react-router-dom';
 
 function ProductCard({ product, onAddToCart, isLoggedIn }) {
     const { id, title, description, price, image, rating } = product;
@@ -30,6 +32,7 @@ function ProductCard({ product, onAddToCart, isLoggedIn }) {
                     <button onClick={handleAddToCart}>Add to Cart</button>
                 </>
             )}
+            <Link to={`/product/${id}`}>View Details</Link>
         </div>
     );
 }

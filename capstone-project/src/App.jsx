@@ -5,6 +5,9 @@ import ProductList from './Components/ProductList';
 import Cart from './Components/Cart';
 import Navbar from './Components/NavBar';
 import SuccessfulCheckout from './Components/SuccessfulCheckout';
+import ProductDetail from './Components/ProductDetails';
+import backgroundImage from '../src/assets/background.jpg'; // Import the background image
+
 import './App.css';
 
 function App() {
@@ -22,7 +25,17 @@ function App() {
     };
 
     const addToCart = (product) => {
-        setCart([...cart, product]); 
+        // Check if the product is already in the cart
+        const existingProductIndex = cart.findIndex((item) => item.id === product.id);
+        if (existingProductIndex !== -1) {
+            // If the product is already in the cart, update its quantity
+            const updatedCart = [...cart];
+            updatedCart[existingProductIndex].quantity += product.quantity;
+            setCart(updatedCart);
+        } else {
+            // If the product is not in the cart, add it
+            setCart([...cart, product]);
+        }
     };
 
     const removeFromCart = (productId) => {
@@ -35,16 +48,19 @@ function App() {
 
     return (
         <div className="app-container">
+            <div className="background" style={{ backgroundImage: `url(${backgroundImage})` }} />
             <BrowserRouter>
                 <Navbar isLoggedIn={isLoggedIn} onLogout={handleLogout} />
                 <div className="content">
                     <Routes>
-                        {/* Pass isLoggedIn and addToCart as props to ProductList */}
                         <Route path="/" element={<ProductList isLoggedIn={isLoggedIn} addToCart={addToCart} />} />
                         <Route path="/login" element={<LoginForm onLogin={handleLogin} />} />
-                        {/* Pass cart, removeFromCart, and updateCartItemQuantity as props to Cart */}
                         {isLoggedIn && <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} updateCartItemQuantity={updateCartItemQuantity} />} />}
                         <Route path="/successful-checkout" element={<SuccessfulCheckout />} />
+                        <Route
+                            path="/product/:productId"
+                            element={<ProductDetail addToCart={addToCart} />}
+                        />
                     </Routes>
                 </div>
             </BrowserRouter>

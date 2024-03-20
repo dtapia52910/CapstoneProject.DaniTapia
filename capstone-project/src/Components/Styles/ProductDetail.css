@@ -1,0 +1,16 @@
+/* ProductDetail.css */
+
+.product-image {
+    max-width: 300px;
+    height: auto;
+}
+
+.product-list-container {
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
