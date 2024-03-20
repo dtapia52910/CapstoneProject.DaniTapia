@@ -3,9 +3,10 @@
     padding: 20px;
     background-color: #fff;
     text-align: center;
-    margin: 60px 10px 20px; /* Adjust the top margin to make space for the navbar */
-    z-index: 999; /* Ensure the product cards appear above other elements */
-  }
+    width: 300px; 
+    margin: 20px; 
+    display: inline-block; 
+}
 
 .product-card img {
     max-width: 100%;

@@ -26,3 +26,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+.content {
+    margin-top: 100px; /* Adjust this margin to ensure space below the navbar */
+  }

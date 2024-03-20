@@ -1,38 +1,37 @@
+/* SortingBar.css */
+.sorting-bar {
+  position: fixed; /* Fixed position to stick at the top */
+  top: 40px; /* Adjust based on the navbar height */
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 999; /* sorting bar appears above other elements */
+}
 
-  .sorting-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: beige;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    position: fixed; /* Change to fixed positioning */
-    top: 50px; /* Adjust the top position to align with the navbar */
-    width: calc(100% - 20px); /* Adjust the width to account for padding */
-    z-index: 999; /* Ensure the sorting bar appears above other elements */
-  }
-  .sorting-bar select,
-  .sorting-bar input {
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-  }
+.sorting-bar select,
+.sorting-bar input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  font-family: Bodoni MT;
   
-  .sorting-bar select {
-    width: 150px;
-  }
-  
-  .sorting-bar input[type="number"] {
-    width: 100px;
-  }
-  
-  .sorting-bar select:last-child {
-    margin-right: 0;
-  }
-  
-  .sorting-bar input[type="number"]:last-child {
-    margin-right: 0;
-  }
-  
+}
+
+.sorting-bar select {
+  width: 150px;
+}
+
+.sorting-bar input[type="number"] {
+  width: 100px;
+}
+
+.sorting-bar select:last-child {
+  margin-right: 0;
+}
+
+.sorting-bar input[type="number"]:last-child {
+  margin-right: 0;
+}

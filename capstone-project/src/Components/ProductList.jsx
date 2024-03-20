@@ -48,14 +48,15 @@ function ProductList({ addToCart, isLoggedIn }) {
         <div>
             <h1>Products</h1>
             <SortingBar handleSort={handleSort} />
-            <div className="product-grid">
-                {sortedProducts.map((product) => (
-                    <ProductCard key={product.id} product={product} onAddToCart={addToCart} isLoggedIn={isLoggedIn} />
-                ))}
+            <div className="product-list-container">
+                <div className="product-grid">
+                    {sortedProducts.map(product => (
+                        <ProductCard key={product.id} product={product} addToCart={addToCart} isLoggedIn={isLoggedIn} />
+                    ))}
+                </div>
             </div>
         </div>
     );
 }
 
 export default ProductList;
-

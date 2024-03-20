@@ -17,7 +17,7 @@ function SortingBar({ handleSort }) {
     };
 
     return (
-        <div>
+        <div className="sorting-bar">
             <select value={sortBy} onChange={handleSortChange}>
                 <option value="">Sort By</option>
                 <option value="price">Price (Ascending)</option>

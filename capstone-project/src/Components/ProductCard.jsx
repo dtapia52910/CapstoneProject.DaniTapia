@@ -3,6 +3,7 @@ import '../Components/Styles/ProductCard.css';
 import './ProductDetails'
 import { Link } from 'react-router-dom';
 
+
 function ProductCard({ product, onAddToCart, isLoggedIn }) {
     const { id, title, description, price, image, rating } = product;
     const [quantity, setQuantity] = useState(1);

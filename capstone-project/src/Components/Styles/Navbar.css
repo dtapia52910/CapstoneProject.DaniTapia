@@ -1,11 +1,11 @@
 /* Navbar.css */
 
 .navbar {
-  position: fixed; /* Change to fixed so that it stays at the top */
+  position: fixed; /* Fixed position to stick at the top */
   top: 0;
   left: 0;
   width: 100%;
-  background-color: white;
+  background-color: transparent;
   color: #2C1B14;
   padding: 10px 0;
   display: flex;
@@ -47,9 +47,10 @@ button {
 
 button:hover {
   background-color: #2C1B14;
-  color: white;
+  color: transparent;
 }
 
 body {
   margin-top: 50px; /* Adjust based on the navbar height */
 }
+

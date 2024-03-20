@@ -35,6 +35,8 @@ function LoginForm({ onLogin }) {
   return (
     <div className="login-container">
       <h2>Login</h2>
+      <h3>Please Use the Username: mor_2314</h3>
+      <h3>Please Use the Username: mor_2314</h3>
       {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit} className="login-form">
         <label>
