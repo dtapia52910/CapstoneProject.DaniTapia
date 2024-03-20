@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoginForm from './Components/Login';
 import ProductList from './Components/ProductList';
 import Cart from './Components/Cart';
-import Navbar from './Components/NavBar';
+import Navbar from './Components/Navbar';
 import SuccessfulCheckout from './Components/SuccessfulCheckout';
 import ProductDetail from './Components/ProductDetails';
 import backgroundImage from '../src/assets/background.jpg'; // Import the background image
