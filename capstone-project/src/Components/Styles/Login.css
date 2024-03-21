@@ -1,18 +1,17 @@
-
+/* login css */
 body {
   display:inline;
   justify-content: center;
   align-items: center;
   height: 100vh;
 
-  margin-top: 60px;
 }
 
 .login-container {
   width: 300px;
   padding: 20px;
   border-radius: 10px;
-  background-color: rgba(249, 180, 155, 0.63)
+  background-color: rgba(249, 180, 155, 0.63);
 }
 
 .login-container h2 {

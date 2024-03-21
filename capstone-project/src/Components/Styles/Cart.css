@@ -1,0 +1,37 @@
+/* cart css */
+.cart-container {
+    max-width: 600px;
+    margin: 200px;
+    padding: 20px;
+    background-color: rgba(249, 233, 222, 0.719); /* Set background color */
+}
+
+.cart-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-item {
+    margin-bottom: 20px;
+    background-color: rgba(249, 233, 222, 0.719); /* Set background color for each cart item */
+    padding: 10px; /* Add padding to the cart item */
+    border-radius: 8px; /* Add border radius to the cart item */
+}
+
+.cart-item span {
+    margin-right: 10px;
+}
+
+.cart-item input {
+    width: 60px;
+}
+
+.cart-item button {
+    margin-left: 5px; /* Adjust margin-left for the remove button */
+    padding: 5px 8px; /* Set smaller padding for the remove button */
+    font-size: 0.8em; /* Decrease font size for the remove button */
+}
+
+.checkout-button {
+    margin-top: 20px;
+}

@@ -3,7 +3,7 @@
 .navbar {
   position: fixed; /* Fixed position to stick at the top */
   top: 0;
-  left: 0;
+  left: 100px;
   width: 100%;
   background-color: transparent;
   color: #2C1B14;
@@ -53,4 +53,3 @@ button:hover {
 body {
   margin-top: 50px; /* Adjust based on the navbar height */
 }
-

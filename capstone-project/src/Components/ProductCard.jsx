@@ -3,7 +3,6 @@ import '../Components/Styles/ProductCard.css';
 import './ProductDetails'
 import { Link } from 'react-router-dom';
 
-
 function ProductCard({ product, onAddToCart, isLoggedIn }) {
     const { id, title, description, price, image, rating } = product;
     const [quantity, setQuantity] = useState(1);
@@ -24,7 +23,7 @@ function ProductCard({ product, onAddToCart, isLoggedIn }) {
         <div className="product-card">
             <img src={image} alt={title} />
             <h3>{title}</h3>
-            <p>{description}</p>
+            
             <p>Price: ${price}</p>
             <p>Rating: {rating.rate} ({rating.count} reviews)</p>
             {isLoggedIn && (

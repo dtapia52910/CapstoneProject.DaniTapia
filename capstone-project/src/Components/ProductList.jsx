@@ -3,6 +3,7 @@ import ProductCard from './ProductCard';
 import SortingBar from './SortingBar';
 import './Styles/ProductList.css';
 
+
 function ProductList({ addToCart, isLoggedIn }) {
     const [products, setProducts] = useState([]);
     const [sortedProducts, setSortedProducts] = useState([]);
@@ -46,12 +47,11 @@ function ProductList({ addToCart, isLoggedIn }) {
 
     return (
         <div>
-            <h1>Products</h1>
             <SortingBar handleSort={handleSort} />
             <div className="product-list-container">
                 <div className="product-grid">
                     {sortedProducts.map(product => (
-                        <ProductCard key={product.id} product={product} addToCart={addToCart} isLoggedIn={isLoggedIn} />
+                        <ProductCard key={product.id} product={product} onAddToCart={addToCart} isLoggedIn={isLoggedIn} />
                     ))}
                 </div>
             </div>

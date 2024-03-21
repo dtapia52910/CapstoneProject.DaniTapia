@@ -1,9 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Styles/Navbar.css';
 
 function Navbar({ isLoggedIn, onLogout }) {
+  const navigate = useNavigate(); // Use useNavigate hook
+
+  const handleLogout = () => {
+    // Perform logout action
+    onLogout();
+
+    // Redirect to the products page
+    navigate('/');
+  };
+
   return (
     <nav className={`navbar ${isLoggedIn ? 'logged-in' : ''}`}>
       <div className="navbar-container">
@@ -22,7 +31,7 @@ function Navbar({ isLoggedIn, onLogout }) {
                 <Link to="/cart">My Cart</Link>
               </li>
               <li className="navbar-item">
-                <button onClick={onLogout}>Logout</button>
+                <button onClick={handleLogout}>Logout</button>
               </li>
             </>
           )}
