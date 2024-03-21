@@ -40,7 +40,7 @@ To explore the project locally, follow these steps:
 
 ## Deployment
 
-The project is deployed using Netlify, offering users seamless access to the live application [here](#).
+The project is deployed using Netlify, offering users seamless access to the live application [https://65fc32050168fc0e94a1a8ec--aquamarine-cannoli-a261da.netlify.app/](#).
 
 ## Additional Insights
 
