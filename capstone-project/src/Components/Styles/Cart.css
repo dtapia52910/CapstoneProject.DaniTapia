@@ -1,9 +1,10 @@
 /* cart css */
+
 .cart-container {
     max-width: 600px;
     margin: 200px;
     padding: 20px;
-    background-color: rgba(249, 233, 222, 0.719); /* Set background color */
+    background-color: rgba(249, 233, 222, 0.719);
 }
 
 .cart-list {
@@ -13,9 +14,9 @@
 
 .cart-item {
     margin-bottom: 20px;
-    background-color: rgba(249, 233, 222, 0.719); /* Set background color for each cart item */
-    padding: 10px; /* Add padding to the cart item */
-    border-radius: 8px; /* Add border radius to the cart item */
+    background-color: rgba(249, 233, 222, 0.719);
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .cart-item span {
@@ -27,11 +28,42 @@
 }
 
 .cart-item button {
-    margin-left: 5px; /* Adjust margin-left for the remove button */
-    padding: 5px 8px; /* Set smaller padding for the remove button */
-    font-size: 0.8em; /* Decrease font size for the remove button */
+    margin-left: 5px;
+    padding: 5px 8px;
+    font-size: 0.8em;
+    background-color: rgba(159, 182, 195, 1); /* Button background color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* CSS animation for background-color */
+}
+
+.cart-item button:hover {
+    background-color: #f9b49b; /* Hover background color */
 }
 
 .checkout-button {
     margin-top: 20px;
+    padding: 8px 16px;
+    background-color: rgba(159, 182, 195, 1); /* Button background color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* CSS animation for background-color */
+}
+
+.checkout-button button {
+    padding: 8px 16px; /* Apply padding to the button */
+    background-color: rgba(159, 182, 195, 1); /* Button background color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* CSS animation for background-color */
+}
+
+.checkout-button button:hover {
+    background-color: #f9b49b; /* Hover background color */
 }

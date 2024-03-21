@@ -3,14 +3,14 @@
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%; /* Ensure full width */
+  width: 100%;
   background-color: rgba(249, 233, 222, 0.705);
   color: #2C1B14;
   padding: 10px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 0; /* Remove rounded corners */
   z-index: 1000;
 }
 
