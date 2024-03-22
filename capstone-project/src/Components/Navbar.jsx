@@ -17,17 +17,17 @@ function Navbar({ isLoggedIn, onLogout }) {
     <nav className={`navbar ${isLoggedIn ? 'logged-in' : ''}`}>
       <div className="navbar-container">
         <ul className="navbar-list">
-          <li className="navbar-item products"> {/* Added products class */}
+          <li className="navbar-item products"> 
             <Link to="/">Products</Link>
           </li>
           {!isLoggedIn && (
-            <li className="navbar-item login"> {/* Added login class */}
+            <li className="navbar-item login"> 
               <Link to="/login">Login</Link>
             </li>
           )}
           {isLoggedIn && (
             <>
-              <li className="navbar-item cart"> {/* Added cart class */}
+              <li className="navbar-item cart">
                 <Link to="/cart">Cart</Link>
               </li>
               <li className="navbar-item">

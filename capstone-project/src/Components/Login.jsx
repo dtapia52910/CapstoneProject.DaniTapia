@@ -3,71 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { useLoginMutation } from '../redux/api'; 
 import './Styles/Login.css';
 
-// function LoginForm({ onLogin }) {
-//   const initialFormState = {
-//     username: '',
-//     password: '',
-//   };
-//   const [formState, setFormState] = useState(initialFormState);
-//   const [error, setError] = useState(null);
-//   const navigate = useNavigate();
-//   const [login] = useLoginMutation(); 
-
-//   const handleSubmit = async (event) => {
-//     event.preventDefault();
-
-//     try {
-//       const data = await login(formState); 
-//       onLogin(data.token);
-//       navigate('/');
-//     } catch (error) {
-//       setError(error.message || 'Login failed');
-//     }
-//   };
-
-//   const handleChange = (event) => {
-//     setFormState({
-//       ...formState,
-//       [event.target.name]: event.target.value,
-//     });
-//   };
-
-//   return (
-//     <div className="login-container">
-//       <h2>Login</h2>
-//       <p>Please use the Username: mor_2314</p>
-//       <p>Please use the Password: 83r5^</p>
-//       {error && <p className="error">{error}</p>}
-//       <form onSubmit={handleSubmit} className="login-form">
-//         <label>
-//           Username:
-//           <input
-//             type="text"
-//             name="username"
-//             value={formState.username}
-//             onChange={handleChange}
-//             className="input-field"
-//           />
-//         </label>
-//         <label>
-//           Password:
-//           <input
-//             type="password"
-//             name="password"
-//             value={formState.password}
-//             onChange={handleChange}
-//             className="input-field"
-//           />
-//         </label>
-//         <button type="submit" className="login-button">
-//           Login
-//         </button>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default LoginForm;
 function LoginForm({ onLogin }) {
   const initialFormState = {
     username: '',
@@ -75,14 +10,14 @@ function LoginForm({ onLogin }) {
   };
   const [formState, setFormState] = useState(initialFormState);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false); // Added loading state
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const [login] = useLoginMutation();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Basic form validation
+    
     if (!formState.username || !formState.password) {
       setError('Username and password are required');
       return;
@@ -91,11 +26,20 @@ function LoginForm({ onLogin }) {
     setLoading(true);
 
     try {
-      const data = await login(formState);
-      onLogin(data.token);
-      navigate('/');
+      const data = await login({
+        username: formState.username,
+        password: formState.password
+      });
+      
+      
+      if (data.error) {
+        setError('Incorrect username or password');
+      } else {
+        onLogin(data.token);
+        navigate('/');
+      }
     } catch (error) {
-      setError(error.message || 'Login failed');
+      setError('Login failed. Please try again.'); 
     } finally {
       setLoading(false);
     }
@@ -112,7 +56,7 @@ function LoginForm({ onLogin }) {
     <div className="login-container">
       <h2>Login</h2>
       <p>Please use the Username: mor_2314</p>
-      <p>Please use the Password: 83r5^</p>
+      <p>Please use the Password: 83r5^_</p>
       {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit} className="login-form">
         <label>

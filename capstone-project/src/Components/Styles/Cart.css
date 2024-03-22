@@ -31,7 +31,7 @@
     margin-left: 5px;
     padding: 5px 8px;
     font-size: 0.8em;
-    background-color: rgba(159, 182, 195, 1); /* Button background color */
+    background-color: rgba(159, 182, 195, 1); 
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -40,30 +40,30 @@
 }
 
 .cart-item button:hover {
-    background-color: #f9b49b; /* Hover background color */
+    background-color: #f9b49b; 
 }
 
 .checkout-button {
     margin-top: 20px;
     padding: 8px 16px;
-    background-color: rgba(159, 182, 195, 1); /* Button background color */
+    background-color: rgba(159, 182, 195, 1); 
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out; /* CSS animation for background-color */
+    transition: background-color 0.3s ease-in-out; 
 }
 
 .checkout-button button {
-    padding: 8px 16px; /* Apply padding to the button */
-    background-color: rgba(159, 182, 195, 1); /* Button background color */
+    padding: 8px 16px; 
+    background-color: rgba(159, 182, 195, 1); 
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out; /* CSS animation for background-color */
+    transition: background-color 0.3s ease-in-out; 
 }
 
 .checkout-button button:hover {
-    background-color: #f9b49b; /* Hover background color */
+    background-color: #f9b49b; 
 }

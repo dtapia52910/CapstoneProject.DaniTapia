@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'; // Import useState from React
+import React, { useState, useEffect } from 'react'; 
 import { useParams } from 'react-router-dom';
-import '../Components/Styles/ProductDetail.css'; // Import CSS file
+import '../Components/Styles/ProductDetail.css'; 
 
 const ProductDetail = ({ addToCart, isLoggedIn }) => {
     const [product, setProduct] = useState(null);
@@ -40,7 +40,7 @@ const ProductDetail = ({ addToCart, isLoggedIn }) => {
             <p>{description}</p>
             <p>Price: ${price}</p>
             <p>Rating: {rating.rate} ({rating.count} reviews)</p>
-            {/* Quantity selector and Add to Cart button only shown if user is logged in */}
+            
             {isLoggedIn && (
                 <>
                     <label htmlFor="quantity">Quantity:</label>

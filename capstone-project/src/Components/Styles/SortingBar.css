@@ -2,12 +2,12 @@
 
 .sorting-bar {
   position: fixed;
-  top: 50px; /* Adjusted to match the bottom of the navbar */
+  top: 50px;
   left: 0;
   width: 100%;
-  background-color: rgba(249, 233, 222, 0.705); /* Match the navbar background color */
+  background-color: rgba(249, 233, 222, 0.705); 
   padding: 10px;
-  border-radius: 0; /* Remove rounded corners */
+  border-radius: 0; 
   z-index: 999;
   display: flex;
   justify-content: center;
